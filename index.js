@@ -6,7 +6,7 @@ function maskEmail(inputEmail){
     //split the email into username and domain
     let [username, domain] = inputEmail.split("@");
     //mask the username
-    let maskedUsername = username[0] + "*****" + username[username.length - 1];
+    let maskedUsername = username[0] + "*".repeat(username.length - 2) + username[username.length - 1];
     //Return and concatenate the result
     return maskedUsername + "@" + domain;
 }
